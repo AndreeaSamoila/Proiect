@@ -1,6 +1,6 @@
 .container {
     max-width: 1200px;
-    min-width: 320px;
+    min-width: 380px;
     margin:auto;
     padding: 2rem;
  }
@@ -10,6 +10,7 @@ display: flex;
 justify-content: space-between;
 padding: 0.5rem 0;
 border-bottom: 1px solid #198754;
+min-width: 30px;
  }
 
  .contact .contact-wrapper {
@@ -38,6 +39,27 @@ flex-direction: row;
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    .contact .contact-wrapper {
+      flex-direction: column !important;
+    }
+
+.contact ul,
+.contact form {
+    width: 100%;
+    padding: 0;
+  }
+
+.contact li {
+    margin-bottom: 1rem;
+  }
+
+.contact li:last-of-type {
+    margin-bottom: var(--spacing-large);
+  }
+ 
+}
+
 .contact input[type="submit"] {
     background-color: #198754;
     color: white;
@@ -49,6 +71,3 @@ flex-direction: row;
     border-radius: 5px;
     height: 40px;
 }
- 
-  
-  
